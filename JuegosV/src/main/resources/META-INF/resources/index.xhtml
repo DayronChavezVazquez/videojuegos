@@ -1,0 +1,43 @@
+
+<ui:composition xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/template.xhtml">>
+   <ui:define name="contenido">
+    <div class="card">
+        <h5 class="mt-0">Basic</h5>
+        <p:menubar hideDelay="2000">
+            <p:menuitem value="Home" url="/index.xhtml" />
+            <p:menuitem value="Video Juegos" url="/registroVideoJuegos.xhtml" />
+            <p:menuitem value="Usuarios" url="/registroUsuario.xhtml" />
+            <p:menuitem value="Renta de video juegos" url="/inventario.xhtml" />
+        </p:menubar>
+
+        <h:form id="form-Prestamos">
+        <p:dataTable id="tbproductos-inventario" reflow="true"
+                     resizeMode="expand" resizableColumns="true" touchtable="true" paginator="true" paginatorPosition="bottom"
+                     rows="10" emptyMessage="No existen registros">
+
+                <p:column headerText="Nombre">
+
+                </p:column>
+
+            <p:column headerText="Fecha Prestamo">
+
+            </p:column>
+
+            <p:column headerText="Fecha devolución">
+
+            </p:column>
+
+
+
+
+        </p:dataTable>
+
+        </h:form>
+    </div>
+
+   </ui:define>
+
+
+</ui:composition>
+

@@ -1,0 +1,30 @@
+<html xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<p:commandButton value="Registrar nuevo video juego" update="form form-datos"
+                 actionListener="#{juegosController.nuevo}"/>
+
+<h:form id="form-datos" rendered="#{juegosController.videojuegoAGuardar!=null}">
+    <p:panelGrid columns="4" layout="grid" id="campos">
+
+    <p:outputLabel value="Nombre" />
+    <p:inputText id="nombre" value="#{juegosController.videojuegoAGuardar.nombre}"/>
+
+    <p:outputLabel value="Precio Prestamo" />
+    <p:inputText id="precio" type="number" value="#{juegosController.videojuegoAGuardar.precioRenta}"/>
+
+    <p:outputLabel value="Existencia" />
+    <p:inputText id="existencia" type="number" value="#{juegosController.videojuegoAGuardar.existencia}"/>
+
+
+    <p:outputLabel value="Descripción" />
+    <p:inputText id="descripcion" value="#{juegosController.videojuegoAGuardar.descripcion}"/>
+
+
+    <p:commandButton value="Guardar Video Juego" update="form form-datos form:mensajes" actionListener="#{juegosController.guardar}"/>
+    </p:panelGrid>
+</h:form>
+
+</html>

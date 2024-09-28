@@ -1,0 +1,30 @@
+<html xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<h:form>
+
+    <div class="field grid">
+        <h:outputLabel for="nombre" value="Nombre" styleClass="col-12 mb-2 md:col-2 md:mb-0"/>
+        <div class="col-12 md:col-10">
+            <p:inputText id="nombre" required="true"/>
+        </div>
+    </div>
+    <div class="field grid">
+        <h:outputLabel for="edad" value="Edad" styleClass="col-12 mb-2 md:col-2 md:mb-0"/>
+        <div class="col-12 md:col-10">
+            <p:inputText id="edad" required="true"/>
+        </div>
+    </div>
+    <div class="field grid">
+        <h:outputLabel for="tel" value="Telefono" styleClass="col-12 mb-2 md:col-2 md:mb-0"/>
+        <div class="col-12 md:col-10">
+            <p:inputText id="tel" required="true"/>
+        </div>
+    </div>
+    <p:commandButton value="Guardar Usuario" update="@form"/>
+</h:form>
+
+</html>
